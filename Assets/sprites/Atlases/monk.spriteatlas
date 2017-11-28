@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: monk
+  m_EditorData:
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 0
+    platformSettings: []
+    packingParameters:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    packedHash:
+      serializedVersion: 2
+      Hash: 188f9ac41f99274aec0c628f0d9dd0af
+    variantMultiplier: 1
+    bindAsDefault: 1
+    finalFormat: 4
+    hashString: 188f9ac41f99274aec0c628f0d9dd0af
+    totalSpriteSurfaceArea: 220320
+    packables:
+    - {fileID: 2800000, guid: d7d71f536ba8c134cae0fab665431b31, type: 3}
+    - {fileID: 2800000, guid: a0332a56c16d0ee45ae3641ac3aed539, type: 3}
+    - {fileID: 2800000, guid: 0caa61aa83841ed439c6283696050c10, type: 3}
+    - {fileID: 2800000, guid: 9f0aa19bf77572d42928af8d28984565, type: 3}
+    - {fileID: 2800000, guid: 0aa3e9cadc04a53418e0ccc28db292c2, type: 3}
+    - {fileID: 2800000, guid: 330b59c44d4362b41931ad901c2e4e6b, type: 3}
+    - {fileID: 2800000, guid: feefd7dfbbf046c4f92c8c225c58c134, type: 3}
+    - {fileID: 2800000, guid: d6b5953a53335c143b1015ebc129f6da, type: 3}
+    - {fileID: 2800000, guid: 58e053c879260ba4bb9131af03deb451, type: 3}
+    - {fileID: 2800000, guid: 34933db28d7fb474b8b30a347a7eeec4, type: 3}
+    - {fileID: 2800000, guid: 7f9d4e07b696bcc4a880f33dfca8fca0, type: 3}
+    - {fileID: 2800000, guid: 8d2244294e654e748ab859df5dfa135b, type: 3}
+    - {fileID: 2800000, guid: 6c08ed1c5c2b42741904b8fabb721695, type: 3}
+    - {fileID: 2800000, guid: 17cd41d2500f9cf4f9e7f58d86052ee8, type: 3}
+    - {fileID: 2800000, guid: 690377f5926b80e4799e198170fa9154, type: 3}
+    packedSpriteRenderDataKeys:
+    - a0332a56c16d0ee45ae3641ac3aed539: 21300000
+    - 690377f5926b80e4799e198170fa9154: 21300000
+    - d6b5953a53335c143b1015ebc129f6da: 21300000
+    - 17cd41d2500f9cf4f9e7f58d86052ee8: 21300000
+    - 8d2244294e654e748ab859df5dfa135b: 21300000
+    - 6c08ed1c5c2b42741904b8fabb721695: 21300000
+    - 330b59c44d4362b41931ad901c2e4e6b: 21300000
+    - 58e053c879260ba4bb9131af03deb451: 21300000
+    - 7f9d4e07b696bcc4a880f33dfca8fca0: 21300000
+    - 0caa61aa83841ed439c6283696050c10: 21300000
+    - 0aa3e9cadc04a53418e0ccc28db292c2: 21300000
+    - 9f0aa19bf77572d42928af8d28984565: 21300000
+    - feefd7dfbbf046c4f92c8c225c58c134: 21300000
+    - 34933db28d7fb474b8b30a347a7eeec4: 21300000
+    - d7d71f536ba8c134cae0fab665431b31: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a0332a56c16d0ee45ae3641ac3aed539, type: 3}
+  - {fileID: 21300000, guid: 690377f5926b80e4799e198170fa9154, type: 3}
+  - {fileID: 21300000, guid: d6b5953a53335c143b1015ebc129f6da, type: 3}
+  - {fileID: 21300000, guid: 17cd41d2500f9cf4f9e7f58d86052ee8, type: 3}
+  - {fileID: 21300000, guid: 8d2244294e654e748ab859df5dfa135b, type: 3}
+  - {fileID: 21300000, guid: 6c08ed1c5c2b42741904b8fabb721695, type: 3}
+  - {fileID: 21300000, guid: 330b59c44d4362b41931ad901c2e4e6b, type: 3}
+  - {fileID: 21300000, guid: 58e053c879260ba4bb9131af03deb451, type: 3}
+  - {fileID: 21300000, guid: 7f9d4e07b696bcc4a880f33dfca8fca0, type: 3}
+  - {fileID: 21300000, guid: 0caa61aa83841ed439c6283696050c10, type: 3}
+  - {fileID: 21300000, guid: 0aa3e9cadc04a53418e0ccc28db292c2, type: 3}
+  - {fileID: 21300000, guid: 9f0aa19bf77572d42928af8d28984565, type: 3}
+  - {fileID: 21300000, guid: feefd7dfbbf046c4f92c8c225c58c134, type: 3}
+  - {fileID: 21300000, guid: 34933db28d7fb474b8b30a347a7eeec4, type: 3}
+  - {fileID: 21300000, guid: d7d71f536ba8c134cae0fab665431b31, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Idle+Run
+  - Run08
+  - Run06
+  - Run07
+  - Run04
+  - Run05
+  - Run02
+  - Run03
+  - Run01
+  - Idle01
+  - Idle03
+  - Idle02
+  - Idle05
+  - Idle04
+  - Idle06
+  m_Tag: monk
+  m_IsVariant: 0
