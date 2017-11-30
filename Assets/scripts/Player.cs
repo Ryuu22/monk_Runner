@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    [Header("Stats")]
 
-    [SerializeField] private bool running;
     [SerializeField] private Vector2 speed;
+    [SerializeField] private float jumpForce;
+
+    [SerializeField] private bool running; //deserialize
+
     private Rigidbody2D rb;
     public Animator anim;
 
@@ -21,17 +25,20 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow)) MakePlayerRun();
-        if (Input.GetKeyUp(KeyCode.RightArrow)) MakePlayerStop();
+        if (Input.GetKeyDown(KeyCode.RightArrow)) MakePlayerRun();      //provisional Run input
+        if (Input.GetKeyUp(KeyCode.RightArrow)) MakePlayerStop();       //provisional Stop input
 
-        if (running)
-        {
-            rb.AddForce(speed);
-        }
 
         //Animation
         anim.SetBool("running", running);
 
+    }
+    void FixedUpdate()
+    {
+        if (running)
+        {
+            rb.AddForce(speed);
+        }
     }
 
     void MakePlayerRun()//switches on the boolean and activates the animation
