@@ -6,10 +6,23 @@ public class Player : MonoBehaviour {
 
     [Header("Stats")]
 
-    [SerializeField] private Vector2 speed;
+    [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
 
-    [SerializeField] private bool running; //deserialize
+    [Header("States")]
+
+    [SerializeField] private bool landed;
+    [SerializeField] private bool jumping;
+    [SerializeField] private bool hittingWall;
+
+    [Header("DetectionBoxes")]
+    [SerializeField] private Vector3 sideBoxSize;
+    [SerializeField] private Vector3 sideBoxPosition;
+
+    [SerializeField] private Vector3 floorBoxSize;
+    [SerializeField] private Vector3 floorBoxPosition;
+
+    [SerializeField] private bool running; //Deserialize later
 
     private Rigidbody2D rb;
     public Animator anim;
@@ -19,7 +32,7 @@ public class Player : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody2D>();
         running = false;
-        speed.x = 10.0f;
+        speed = 10.0f;
 
     }
 
@@ -28,7 +41,9 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.RightArrow)) MakePlayerRun();      //provisional Run input
         if (Input.GetKeyUp(KeyCode.RightArrow)) MakePlayerStop();       //provisional Stop input
 
+        if (Input.GetKey(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
 
+        
         //Animation
         anim.SetBool("running", running);
 
@@ -37,7 +52,8 @@ public class Player : MonoBehaviour {
     {
         if (running)
         {
-            rb.AddForce(speed);
+            Vector2 speedV = new Vector2(speed, 0);
+            rb.AddForce(speedV);
         }
     }
 
@@ -50,6 +66,13 @@ public class Player : MonoBehaviour {
     {
         running = false;
         rb.velocity = Vector3.zero;
+    }
+    void MakePlayerJump()
+    {
+        jumping = true;
+
+        Vector2 jumpForceV = new Vector2(0, jumpForce);
+        rb.AddForce(jumpForceV);
     }
 
 }
