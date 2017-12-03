@@ -12,15 +12,18 @@ public class Player : MonoBehaviour {
     [Header("States")]
 
     [SerializeField] private bool landed;
-    [SerializeField] private bool jumping;
     [SerializeField] private bool hittingWall;
 
     [Header("DetectionBoxes")]
+    [SerializeField] private ContactFilter2D filter;
+
     [SerializeField] private Vector3 sideBoxSize;
     [SerializeField] private Vector3 sideBoxPosition;
 
     [SerializeField] private Vector3 floorBoxSize;
+    [SerializeField] private Vector3 posFloor;
     [SerializeField] private Vector3 floorBoxPosition;
+
 
     [SerializeField] private bool running; //Deserialize later
 
@@ -38,14 +41,16 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow)) MakePlayerRun();      //provisional Run input
-        if (Input.GetKeyUp(KeyCode.RightArrow)) MakePlayerStop();       //provisional Stop input
+        if (Input.GetKey(KeyCode.RightArrow)) MakePlayerRun();      //provisional Run input
+        if (Input.GetKeyUp(KeyCode.RightArrow) && landed) MakePlayerStop();       //provisional Stop input
 
-        if (Input.GetKey(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
+        if (Input.GetKeyDown(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
 
         
         //Animation
         anim.SetBool("running", running);
+
+        DetectFloor();
 
     }
     void FixedUpdate()
@@ -68,11 +73,39 @@ public class Player : MonoBehaviour {
         rb.velocity = Vector3.zero;
     }
     void MakePlayerJump()
-    {
-        jumping = true;
-
+    { 
         Vector2 jumpForceV = new Vector2(0, jumpForce);
         rb.AddForce(jumpForceV);
+    }
+
+    #region Environment detection
+
+    void DetectFrontWall()
+    {
+
+    }
+
+    void DetectFloor()
+    {
+        posFloor = this.transform.position + (Vector3)floorBoxPosition;
+        Collider2D[] results = new Collider2D[1];
+
+        int numColliders = Physics2D.OverlapBox(posFloor, floorBoxSize, 0, filter, results);
+
+        if (numColliders > 0) landed = true;
+        else landed = false;
+
+    }
+
+    #endregion
+
+    private void OnDrawGizmos()
+    {
+       Gizmos.color = Color.red;
+
+
+        //Gizmos.DrawWireCube(sideBoxPosition,sideBoxSize);
+        Gizmos.DrawWireCube(posFloor, floorBoxSize);
     }
 
 }
