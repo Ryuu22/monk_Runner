@@ -42,10 +42,11 @@ public class Player : MonoBehaviour {
     void Update()
     {
         if (Input.GetKey(KeyCode.RightArrow)) MakePlayerRun();      //provisional Run input
-        if (Input.GetKeyUp(KeyCode.RightArrow) && landed) MakePlayerStop();       //provisional Stop input
+        if (Input.GetKeyUp(KeyCode.RightArrow)) running = false;       //provisional Stop input
 
         if (Input.GetKeyDown(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
 
+        if (landed && !running) MakePlayerStop();
         
         //Animation
         anim.SetBool("running", running);
@@ -70,12 +71,16 @@ public class Player : MonoBehaviour {
     void MakePlayerStop()
     {
         running = false;
-        rb.velocity = Vector3.zero;
+        rb.velocity = new Vector3 (0,rb.velocity.y,0);
     }
     void MakePlayerJump()
     { 
-        Vector2 jumpForceV = new Vector2(0, jumpForce);
-        rb.AddForce(jumpForceV);
+        if(landed)
+        {
+            Vector2 jumpForceV = new Vector2(0, jumpForce);
+            rb.AddForce(jumpForceV);
+        }
+
     }
 
     #region Environment detection
