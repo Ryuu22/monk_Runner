@@ -50,6 +50,7 @@ public class Player : MonoBehaviour {
         
         //Animation
         anim.SetBool("running", running);
+        anim.SetBool("landed", landed);
 
         DetectFloor();
 
