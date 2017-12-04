@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow)) MakePlayerRun();      //provisional Run input
+        if (Input.GetKey(KeyCode.RightArrow) && landed) MakePlayerRun();      //provisional Run input
         if (Input.GetKeyUp(KeyCode.RightArrow)) running = false;       //provisional Stop input
 
         if (Input.GetKeyDown(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
@@ -82,6 +83,10 @@ public class Player : MonoBehaviour {
             rb.AddForce(jumpForceV);
         }
 
+    }
+    public void Die()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     #region Environment detection
