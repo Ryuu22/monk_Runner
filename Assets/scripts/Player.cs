@@ -27,6 +27,8 @@ public class Player : MonoBehaviour {
 
 
     [SerializeField] private bool running; //Deserialize later
+    [SerializeField] private bool falling; //Deserialize later
+    [SerializeField] private bool raising; //Deserialize later
 
     private Rigidbody2D rb;
     public Animator anim;
@@ -48,10 +50,27 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
 
         if (landed && !running) MakePlayerStop();
-        
-        //Animation
-        anim.SetBool("running", running);
+
+        if (!landed && rb.velocity.y < 1.5f)
+        {
+            falling = true;
+            raising = false;
+        }
+        else if (!landed && rb.velocity.y > 0)
+        {
+            falling = false;
+            raising = true;
+        }
+        else
+        {
+            falling = false;
+            raising = false;
+        }
+            //Animation
+            anim.SetBool("running", running);
         anim.SetBool("landed", landed);
+        anim.SetBool("falling", falling);
+        anim.SetBool("raising", raising);
 
         DetectFloor();
 
