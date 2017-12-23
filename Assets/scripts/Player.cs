@@ -12,8 +12,8 @@ public class Player : MonoBehaviour {
 
     [Header("States")]
 
-    [SerializeField] private bool landed;
-    [SerializeField] private bool hittingWall;
+    public bool landed;
+    public bool hittingWall;
 
     [Header("DetectionBoxes")]
     [SerializeField] private ContactFilter2D filter;
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private Vector3 floorBoxPosition;
 
 
-    [SerializeField] private bool running; //Deserialize later
+    public bool running; //Deserialize later
     [SerializeField] private bool falling; //Deserialize later
     [SerializeField] private bool raising; //Deserialize later
 
@@ -44,10 +44,6 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow) && landed) MakePlayerRun();      //provisional Run input
-        if (Input.GetKeyUp(KeyCode.RightArrow)) running = false;       //provisional Stop input
-
-        if (Input.GetKeyDown(KeyCode.UpArrow)) MakePlayerJump();       //provisional Stop input
 
         if (landed && !running) MakePlayerStop();
 
@@ -84,17 +80,17 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void MakePlayerRun()//switches on the boolean and activates the animation
+    public void MakePlayerRun()//switches on the boolean and activates the animation
     {
         running = true;
     }
 
-    void MakePlayerStop()
+    public void MakePlayerStop()
     {
         running = false;
         rb.velocity = new Vector3 (0,rb.velocity.y,0);
     }
-    void MakePlayerJump()
+    public void MakePlayerJump()
     { 
         if(landed)
         {

@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4071485164157742}
   - component: {fileID: 114623739643617448}
   - component: {fileID: 50331440338338550}
+  - component: {fileID: 114828033495606620}
   - component: {fileID: 61096818293885494}
   m_Layer: 9
   m_Name: Player
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  jumpForce: 400
+  jumpForce: 500
   landed: 0
   hittingWall: 0
   filter:
@@ -173,6 +174,17 @@ MonoBehaviour:
   falling: 0
   raising: 0
   anim: {fileID: 95961423612913318}
+--- !u!114 &114828033495606620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1707981501203980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c265ef927be4ec4aa5abb34dd212183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212732367289952974
 SpriteRenderer:
   m_ObjectHideFlags: 1
