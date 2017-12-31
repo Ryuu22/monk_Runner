@@ -15,15 +15,17 @@ public class Player : MonoBehaviour {
     public bool landed;
     public bool hittingWall;
 
+    [SerializeField] private bool dialogMode;
+
     [Header("DetectionBoxes")]
-    [SerializeField] private ContactFilter2D filter;
+    private ContactFilter2D filter;
 
-    [SerializeField] private Vector3 sideBoxSize;
-    [SerializeField] private Vector3 sideBoxPosition;
+    private Vector3 sideBoxSize;
+    private Vector3 sideBoxPosition;
 
-    [SerializeField] private Vector3 floorBoxSize;
-    [SerializeField] private Vector3 posFloor;
-    [SerializeField] private Vector3 floorBoxPosition;
+    private Vector3 floorBoxSize;
+    private Vector3 posFloor;
+    private Vector3 floorBoxPosition;
 
 
     public bool running; //Deserialize later
@@ -63,7 +65,7 @@ public class Player : MonoBehaviour {
             raising = false;
         }
             //Animation
-            anim.SetBool("running", running);
+        anim.SetBool("running", running);
         anim.SetBool("landed", landed);
         anim.SetBool("falling", falling);
         anim.SetBool("raising", raising);
@@ -82,7 +84,11 @@ public class Player : MonoBehaviour {
 
     public void MakePlayerRun()//switches on the boolean and activates the animation
     {
-        running = true;
+        if (!dialogMode)
+        {
+            running = true;
+        }
+
     }
 
     public void MakePlayerStop()
@@ -132,6 +138,16 @@ public class Player : MonoBehaviour {
 
         //Gizmos.DrawWireCube(sideBoxPosition,sideBoxSize);
         Gizmos.DrawWireCube(posFloor, floorBoxSize);
+    }
+
+    public void EnterDialogMode()
+    {
+        dialogMode = true;
+    }
+
+    public void ExitDialogMode()
+    {
+        dialogMode = false;
     }
 
 }
