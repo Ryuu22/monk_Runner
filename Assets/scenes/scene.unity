@@ -1151,6 +1151,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   cameraTransform: {fileID: 0}
   freq: 0.2
+  focusFreq: 0.05
   focusMode: 0
   tempFocusPoint: {fileID: 0}
 --- !u!1001 &1782944170
