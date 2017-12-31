@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private bool dialogMode;
 
     [Header("DetectionBoxes")]
-    private ContactFilter2D filter;
+    public ContactFilter2D filter;
 
     private Vector3 sideBoxSize;
     private Vector3 sideBoxPosition;
@@ -143,6 +143,8 @@ public class Player : MonoBehaviour {
     public void EnterDialogMode()
     {
         dialogMode = true;
+        if(running)running = false;
+        rb.velocity = Vector2.zero;
     }
 
     public void ExitDialogMode()

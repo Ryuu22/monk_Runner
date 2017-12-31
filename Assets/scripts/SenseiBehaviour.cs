@@ -30,7 +30,7 @@ public class SenseiBehaviour : MonoBehaviour {
 
 
 	}
-    private void OnTriggerEnter2D(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == ("Player"))
         {
@@ -46,13 +46,14 @@ public class SenseiBehaviour : MonoBehaviour {
 
         //TODO:change for an animation in the future
         canvas.SetActive(true);
-        
+
+        FindObjectOfType<CameraBehaviour>().EnterFocusMode(focusPoint);
         //add focus function on camera Find.gameobject.camera...
     }
     private void EndDialog()
     {
         FindObjectOfType<Player>().ExitDialogMode();
-
+        FindObjectOfType<CameraBehaviour>().ExitFocusMode();
         //hide canvas
         canvas.SetActive(false);
 
