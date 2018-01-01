@@ -198,7 +198,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321633605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 340, y: -164.94118, z: 0}
+  m_LocalPosition: {x: 340, y: -165.15611, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2054118265}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 523145993}
   - component: {fileID: 523145994}
   - component: {fileID: 523145995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: placeholderblock (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,8 +330,9 @@ MonoBehaviour:
   selected: 0
   levelNumber: 4
   freq: 0.5
+  opacityColor: {r: 1, g: 1, b: 1, a: 0.47058824}
   defaultScale: {x: 0, y: 0}
-  selectedScale: {x: 9, y: 9}
+  selectedScale: {x: 11, y: 11}
 --- !u!1 &643771486
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ GameObject:
   - component: {fileID: 643771487}
   - component: {fileID: 643771488}
   - component: {fileID: 643771489}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: placeholderblock (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,8 +421,9 @@ MonoBehaviour:
   selected: 0
   levelNumber: 1
   freq: 0.5
+  opacityColor: {r: 1, g: 1, b: 1, a: 0.47058824}
   defaultScale: {x: 0, y: 0}
-  selectedScale: {x: 9, y: 9}
+  selectedScale: {x: 11, y: 11}
 --- !u!1 &653340906
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +448,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 653340906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -340, y: 164.94118, z: 0}
+  m_LocalPosition: {x: -340, y: 165.15611, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2054118265}
@@ -476,7 +478,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c39a844597866cd44909b50293d0e9db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -541,7 +543,7 @@ GameObject:
   - component: {fileID: 809002582}
   - component: {fileID: 809002581}
   - component: {fileID: 809002583}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: placeholderblock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,11 +618,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f178df1257367479cea684a1546f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected: 0
+  selected: 1
   levelNumber: 0
-  freq: 0
+  freq: 0.5
+  opacityColor: {r: 1, g: 1, b: 1, a: 0.47058824}
   defaultScale: {x: 0, y: 0}
-  selectedScale: {x: 9, y: 9}
+  selectedScale: {x: 11, y: 11}
 --- !u!1 &1066905190
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +634,7 @@ GameObject:
   - component: {fileID: 1066905191}
   - component: {fileID: 1066905192}
   - component: {fileID: 1066905193}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: placeholderblock (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,8 +712,9 @@ MonoBehaviour:
   selected: 0
   levelNumber: 3
   freq: 0.5
+  opacityColor: {r: 1, g: 1, b: 1, a: 0.47058824}
   defaultScale: {x: 0, y: 0}
-  selectedScale: {x: 9, y: 9}
+  selectedScale: {x: 11, y: 11}
 --- !u!1 &1089384490
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1089384491}
   - component: {fileID: 1089384492}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scenes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +779,7 @@ GameObject:
   - component: {fileID: 1801680856}
   - component: {fileID: 1801680857}
   - component: {fileID: 1801680858}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: placeholderblock (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -853,8 +857,9 @@ MonoBehaviour:
   selected: 0
   levelNumber: 2
   freq: 0.5
+  opacityColor: {r: 1, g: 1, b: 1, a: 0.47058824}
   defaultScale: {x: 0, y: 0}
-  selectedScale: {x: 9, y: 9}
+  selectedScale: {x: 11, y: 11}
 --- !u!1 &2054118261
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,8 +942,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2054118261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 425, y: 239, z: 0}
-  m_LocalScale: {x: 1.0625, y: 1.0625, z: 1.0625}
+  m_LocalPosition: {x: 560.5, y: 315.5, z: 0}
+  m_LocalScale: {x: 1.40125, y: 1.40125, z: 1.40125}
   m_Children:
   - {fileID: 653340907}
   - {fileID: 321633606}
