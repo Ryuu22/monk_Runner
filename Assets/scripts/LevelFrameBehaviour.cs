@@ -8,12 +8,19 @@ public class LevelFrameBehaviour : MonoBehaviour {
     public int levelNumber;
     public float freq;
 
+    public Color opacityColor;
+    private Color originalcolor;
+
     public Vector2 defaultScale;
     public Vector2 selectedScale;
+
+    private SpriteRenderer sr;
 
     private void Start()
     {
         defaultScale = this.transform.localScale;
+        sr = this.GetComponent<SpriteRenderer>();
+        originalcolor = this.sr.color;
     }
 
     // Update is called once per frame
@@ -33,10 +40,15 @@ public class LevelFrameBehaviour : MonoBehaviour {
         if(spriteIndex == levelNumber)
         {
             selected = true;
+            sr.color = originalcolor;
+            sr.sortingOrder = 1;
         }
         else
         {
             selected = false;
+
+            sr.color = opacityColor;
+            sr.sortingOrder = 0;
         }
     }
     
