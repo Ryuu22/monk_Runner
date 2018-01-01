@@ -10,6 +10,7 @@ public class CameraBehaviour : MonoBehaviour {
     [SerializeField] private float freq;
     [SerializeField] private float focusFreq;
     [SerializeField] private bool focusMode;
+
     [SerializeField] private GameObject tempFocusPoint;
 
     private Vector2 cameraPos;

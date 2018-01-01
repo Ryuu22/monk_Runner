@@ -8,11 +8,7 @@ public class SenseiBehaviour : MonoBehaviour {
     [SerializeField] private GameObject focusPoint;
     [SerializeField] private GameObject canvas;
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
+
 	
 	// Update is called once per frame
 	void Update ()
@@ -27,9 +23,10 @@ public class SenseiBehaviour : MonoBehaviour {
                 }
             }
         }
+        //Animation
+        canvas.GetComponentInChildren<Animator>().SetBool("display", onDialog);
 
-
-	}
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == ("Player"))
@@ -44,18 +41,14 @@ public class SenseiBehaviour : MonoBehaviour {
     {
         onDialog = true;
 
-        //TODO:change for an animation in the future
-        canvas.SetActive(true);
-
         FindObjectOfType<CameraBehaviour>().EnterFocusMode(focusPoint);
-        //add focus function on camera Find.gameobject.camera...
+
     }
     private void EndDialog()
     {
         FindObjectOfType<Player>().ExitDialogMode();
         FindObjectOfType<CameraBehaviour>().ExitFocusMode();
-        //hide canvas
-        canvas.SetActive(false);
+        onDialog = false;
 
     }
 }
