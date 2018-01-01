@@ -5,17 +5,35 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
 
     Player player;
+    MenuLevelList levelList;
+    public bool gamePlayScene;
+
 	void Start ()
     {
-        player = GetComponent<Player>();
+        if (gamePlayScene) player = GetComponent<Player>();
+        else levelList = FindObjectOfType<MenuLevelList>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-
-        if (Input.GetKey(KeyCode.RightArrow) && player.landed) player.MakePlayerRun();   
-        if (Input.GetKeyUp(KeyCode.RightArrow)) player.running = false;                    
-        if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump();     
+        if(gamePlayScene)
+        {
+            if (Input.GetKey(KeyCode.RightArrow) && player.landed) player.MakePlayerRun();   
+            if (Input.GetKeyUp(KeyCode.RightArrow)) player.running = false;                    
+            if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump(); 
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                levelList.MoveRight();
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                levelList.MoveLeft();
+            }
+        }
+    
     }
 }
