@@ -49,4 +49,8 @@ public class MenuLevelList : MonoBehaviour {
             }
         }
     }
+    public void EnterScene()
+    {
+        sprites[spriteIndex].GetComponent<LevelFrameBehaviour>().GoToScene();
+    }
 }

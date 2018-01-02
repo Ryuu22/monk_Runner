@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class LevelFrameBehaviour : MonoBehaviour {
 
     public bool selected;
+
     public int levelNumber;
     public float freq;
 
@@ -49,6 +51,13 @@ public class LevelFrameBehaviour : MonoBehaviour {
 
             sr.color = opacityColor;
             sr.sortingOrder = 0;
+        }
+    }
+    public void GoToScene()
+    {
+        if(selected)
+        {
+            SceneManager.LoadScene("Level1");
         }
     }
     

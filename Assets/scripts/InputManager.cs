@@ -33,6 +33,10 @@ public class InputManager : MonoBehaviour {
             {
                 levelList.MoveLeft();
             }
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                levelList.EnterScene();
+            }
         }
     
     }

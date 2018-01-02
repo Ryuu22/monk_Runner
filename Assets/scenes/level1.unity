@@ -576,6 +576,9 @@ MonoBehaviour:
   playerTransform: {fileID: 166335598}
   cameraTransform: {fileID: 0}
   freq: 1
+  focusFreq: 0
+  focusMode: 0
+  tempFocusPoint: {fileID: 0}
 --- !u!1001 &1483057916
 Prefab:
   m_ObjectHideFlags: 0
@@ -660,6 +663,11 @@ Prefab:
     - target: {fileID: 4071485164157742, guid: 714d20d82f43f29498ec24aff6e5b9ad, type: 2}
       propertyPath: m_RootOrder
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828033495606620, guid: 714d20d82f43f29498ec24aff6e5b9ad,
+        type: 2}
+      propertyPath: gamePlayScene
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 714d20d82f43f29498ec24aff6e5b9ad, type: 2}
