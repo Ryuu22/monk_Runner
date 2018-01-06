@@ -79,6 +79,7 @@ public class Player : MonoBehaviour {
         {
             Vector2 speedV = new Vector2(speed, 0);
             rb.AddForce(speedV);
+            //this.transform.Translate(new Vector3(speed * Time.deltaTime/3, 0));
         }
     }
 
