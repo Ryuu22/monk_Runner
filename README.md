@@ -12,7 +12,7 @@ Well, in our college there is a subject where you learn how to professionally wo
 
 [The wiki](https://github.com/RyuuSukeChan/monk_Runner/wiki)
 
-# Contact
+### Contact
 
 **Programming**
  [Ryuu's Twitter](https://twitter.com/KGuasowskyBwoy) - [GitHub](https://github.com/RyuuSukeChan)
@@ -23,7 +23,7 @@ Well, in our college there is a subject where you learn how to professionally wo
 **Art**
  [Gregorio's ArtStation](https://www.artstation.com/gregoriom)
 
-### Last Updates
+## Last Updates
 
 ![DialogGif](WikiResources/Dialog.gif)
 ![SawsGif](WikiResources/saws.gif)
