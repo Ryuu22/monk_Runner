@@ -24,6 +24,6 @@ Well, in our college there is a subject where you learn how to professionally wo
  [Gregorio's ArtStation](https://www.artstation.com/gregoriom)
 
 ## Last Updates
-
+![parallax](https://github.com/RyuuSukeChan/monk_Runner/blob/master/WikiResources/parallaxtest.gif)
 ![DialogGif](WikiResources/Dialog.gif)
 ![SawsGif](WikiResources/saws.gif)
