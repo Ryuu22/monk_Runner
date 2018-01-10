@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4165718721368654}
   - component: {fileID: 58398526690007992}
   - component: {fileID: 114599256537427654}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Saw
   m_TagString: Hazard
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067672417950158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.9, y: -0.74, z: 0.29492188}
+  m_LocalPosition: {x: 12.13, y: -0.359506, z: 0.29492188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4998978873232682}
@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 1287211602575796}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4165718721368654}
   m_RootOrder: 0
@@ -85,7 +85,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.93
+  m_Radius: 0.85
 --- !u!114 &114599256537427654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d691e1a6dc18526478882f0da25bf074, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 828e800e0532cda46ae64d7610827528, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
