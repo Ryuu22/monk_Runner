@@ -33,6 +33,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private bool raising; //Deserialize later
 
     private Rigidbody2D rb;
+    private float monkVelocity;
     public Animator anim;
 
     // Use this for initialization
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour {
 
         if (!landed && rb.velocity.y < 1.5f)
         {
+            if(!running)rb.velocity = new Vector2(monkVelocity,rb.velocity.y);
             falling = true;
             raising = false;
         }
@@ -78,8 +80,7 @@ public class Player : MonoBehaviour {
         if (running)
         {
             Vector2 speedV = new Vector2(speed, 0);
-            rb.AddForce(speedV);
-            //this.transform.Translate(new Vector3(speed * Time.deltaTime/3, 0));
+            if(landed)rb.AddForce(speedV);
         }
     }
 
@@ -101,7 +102,10 @@ public class Player : MonoBehaviour {
     { 
         if(landed)
         {
+            monkVelocity = rb.velocity.x;
+
             Vector2 jumpForceV = new Vector2(0, jumpForce);
+
             rb.AddForce(jumpForceV);
         }
 
