@@ -7,7 +7,9 @@ public class SenseiBehaviour : MonoBehaviour {
     [SerializeField] private bool onDialog;
     [SerializeField] private GameObject focusPoint;
     [SerializeField] private GameObject canvas;
-
+    [SerializeField] private string[] dialogs;
+    [SerializeField] private GameObject text;
+    private int pointer;
 
 	
 	// Update is called once per frame
@@ -17,7 +19,7 @@ public class SenseiBehaviour : MonoBehaviour {
         {
             if(Input.GetKey(KeyCode.K)) //TODO: change provisional
             {
-                if(true)/*Change by a counter when more text is added*/
+                if(dialogs.Length > pointer)/*Change by a counter when more text is added*/
                 {
                     EndDialog();
                 }
