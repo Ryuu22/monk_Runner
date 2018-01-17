@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
 
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private Vector2 maxVelocity;
 
     [Header("States")]
 
@@ -47,6 +48,10 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
+        if(rb.velocity.x > maxVelocity.x)
+        {
+            rb.velocity = new Vector2(maxVelocity.x,rb.velocity.y);
+        }
 
         if (landed && !running) MakePlayerStop();
 

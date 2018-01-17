@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour {
     {
         if(gamePlayScene)
         {
+            
             if (Input.GetKey(KeyCode.RightArrow) && player.landed) player.MakePlayerRun();   
             if (Input.GetKeyUp(KeyCode.RightArrow)) player.running = false;                    
             if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump(); 
