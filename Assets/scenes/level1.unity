@@ -780,12 +780,12 @@ Prefab:
     - target: {fileID: 224018018334034782, guid: 62783c5ad8033ed4ab04a08f73115692,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 339.24738
+      value: 566.2474
       objectReference: {fileID: 0}
     - target: {fileID: 224018018334034782, guid: 62783c5ad8033ed4ab04a08f73115692,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 189.55957
+      value: 317.55957
       objectReference: {fileID: 0}
     - target: {fileID: 61832190010911810, guid: 62783c5ad8033ed4ab04a08f73115692,
         type: 2}
@@ -1390,6 +1390,21 @@ Prefab:
     - target: {fileID: 4071485164157742, guid: 714d20d82f43f29498ec24aff6e5b9ad, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114623739643617448, guid: 714d20d82f43f29498ec24aff6e5b9ad,
+        type: 2}
+      propertyPath: maxVelocity.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114623739643617448, guid: 714d20d82f43f29498ec24aff6e5b9ad,
+        type: 2}
+      propertyPath: maxVelocity.y
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 114623739643617448, guid: 714d20d82f43f29498ec24aff6e5b9ad,
+        type: 2}
+      propertyPath: landed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 714d20d82f43f29498ec24aff6e5b9ad, type: 2}

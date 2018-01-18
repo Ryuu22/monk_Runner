@@ -42,7 +42,6 @@ public class Player : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody2D>();
         running = false;
-        speed = 10.0f;
 
     }
 
