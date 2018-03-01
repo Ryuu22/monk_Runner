@@ -5,40 +5,54 @@ using UnityEngine;
 public class InputManager : MonoBehaviour {
 
     Player player;
-    MenuLevelList levelList;
-    public bool gamePlayScene;
+    
 
 	void Start ()
     {
-        if (gamePlayScene) player = GetComponent<Player>();
-        else levelList = FindObjectOfType<MenuLevelList>();
+        player = GetComponent<Player>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if(gamePlayScene)
+
+#if UNITY_STANDALONE
+
+
+     if (Input.GetKey(KeyCode.RightArrow) && player.landed) player.MakePlayerRun();   
+     if (Input.GetKeyUp(KeyCode.RightArrow)) player.running = false;                    
+     if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump(); 
+ 
+     
+#endif
+#if UNITY_EDITOR
+     foreach(Touch t in Input.touches)
         {
-            
-            if (Input.GetKey(KeyCode.RightArrow) && player.landed) player.MakePlayerRun();   
-            if (Input.GetKeyUp(KeyCode.RightArrow)) player.running = false;                    
-            if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump(); 
+            if(t.position.x < Screen.width/2)
+            {
+                if(t.phase == TouchPhase.Began && player.landed)
+                {
+                    player.MakePlayerRun();
+                }
+                else if(t.phase == TouchPhase.Ended)
+                {
+                    player.running = false;
+                }
+            }
+            else
+            {
+                if(t.phase == TouchPhase.Began)
+                {
+                    player.MakePlayerJump();
+                }
+            }
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                levelList.MoveRight();
-            }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                levelList.MoveLeft();
-            }
-            if(Input.GetKeyDown(KeyCode.Space))
-            {
-                levelList.EnterScene();
-            }
-        }
-    
+
+
+
+#endif
+
     }
+
+
 }

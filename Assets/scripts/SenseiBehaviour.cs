@@ -17,7 +17,7 @@ public class SenseiBehaviour : MonoBehaviour {
     {
 		if(onDialog)
         {
-            if(Input.GetKey(KeyCode.K)) //TODO: change provisional
+            if(Input.GetKey(KeyCode.K) || Input.touchCount > 0) //TODO: change provisional
             {
                 if(dialogs.Length > pointer)/*Change by a counter when more text is added*/
                 {

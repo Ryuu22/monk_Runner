@@ -198,7 +198,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321633605}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 340.00003, y: -153.24043, z: 0}
+  m_LocalPosition: {x: 340, y: -165.05307, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2054118265}
@@ -448,7 +448,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 653340906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -340.00003, y: 153.24043, z: 0}
+  m_LocalPosition: {x: -340, y: 165.05307, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2054118265}
@@ -516,10 +516,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 692587705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c265ef927be4ec4aa5abb34dd212183, type: 3}
+  m_Script: {fileID: 11500000, guid: dff2de82a0aaba34ca1fef7f0c6b4041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePlayScene: 0
+  minimumTouchDistance: 250
 --- !u!4 &692587707
 Transform:
   m_ObjectHideFlags: 0
@@ -942,8 +942,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2054118261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 574, y: 306, z: 0}
-  m_LocalScale: {x: 1.435, y: 1.435, z: 1.435}
+  m_LocalPosition: {x: 471, y: 265, z: 0}
+  m_LocalScale: {x: 1.1775, y: 1.1775, z: 1.1775}
   m_Children:
   - {fileID: 653340907}
   - {fileID: 321633606}
