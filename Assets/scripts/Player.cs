@@ -47,6 +47,8 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
+        if (this.transform.position.y < -10) Die();
+
         if(rb.velocity.x > maxVelocity.x)
         {
             rb.velocity = new Vector2(maxVelocity.x,rb.velocity.y);

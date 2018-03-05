@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3ca7f7d983593354ab3ec6d02fd19689
+timeCreated: 1520286860
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Japonesa
+  fontNames:
+  - Japonesa
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2cc3cc88f34e69645963e93c338dc513, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
