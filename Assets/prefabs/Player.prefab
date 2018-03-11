@@ -149,7 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 500
-  landed: 0
+  maxVelocity: {x: 5, y: 99}
+  landed: 1
   hittingWall: 0
   dialogMode: 0
   filter:
@@ -181,7 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c265ef927be4ec4aa5abb34dd212183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePlayScene: 1
 --- !u!212 &212732367289952974
 SpriteRenderer:
   m_ObjectHideFlags: 1
