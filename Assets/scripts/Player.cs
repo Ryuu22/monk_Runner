@@ -86,7 +86,11 @@ public class Player : MonoBehaviour {
         if (running)
         {
             Vector2 speedV = new Vector2(speed, 0);
-            if(landed)rb.AddForce(speedV);
+            if (landed)
+            {
+                rb.AddForce(speedV,ForceMode2D.Force);
+                GetComponentInChildren<ParticleSystem>().Emit(1);
+            }
         }
     }
 

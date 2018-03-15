@@ -31,15 +31,16 @@ public class CameraBehaviour : MonoBehaviour {
 
         if(focusMode)
         {
+            
             cameraPos = Vector2.Lerp(cameraTransform.position, tempFocusPoint.transform.position, focusFreq);
 
-            cameraTransform.position = new Vector3(cameraPos.x, cameraPos.y, -10);
+            cameraTransform.position = new Vector3(cameraPos.x, 0, -10);
         }
         else
         {
             cameraPos = Vector2.Lerp(cameraTransform.position, playerTransform.position, freq);
 
-            cameraTransform.position = new Vector3(cameraPos.x, cameraPos.y, -10);
+            cameraTransform.position = new Vector3(cameraPos.x, 0, -10);
         }
 
 	}
