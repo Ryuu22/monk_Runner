@@ -32,7 +32,7 @@ public class SpearBehaviour : MonoBehaviour {
             default:
                 break;
         }
-        this.transform.localPosition = new Vector2(this.transform.position.x, value);
+        this.transform.localPosition = new Vector2(this.transform.localPosition.x, value);
     
     }
     void activeUpdate()
@@ -53,7 +53,7 @@ public class SpearBehaviour : MonoBehaviour {
         if (counter < maxTime)
         {
             counter += Time.deltaTime;
-            value = Easing.BounceEaseOut(counter, -2, 2, maxTime);
+            value = Easing.ExpoEaseIn(counter, -2, 2, maxTime);
         }
         else
         {
@@ -67,7 +67,7 @@ public class SpearBehaviour : MonoBehaviour {
         if (counter < maxTime)
         {
             counter += Time.deltaTime;
-            value = Easing.BounceEaseIn(counter, 0, -2, maxTime);
+            value = Easing.BounceEaseOut(counter, 0, -2, maxTime);
         }
         else
         {
