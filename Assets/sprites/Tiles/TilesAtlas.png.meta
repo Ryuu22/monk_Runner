@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -139,7 +139,7 @@ TextureImporter:
       name: TilesAtlas_2
       rect:
         serializedVersion: 2
-        x: 398
+        x: 395
         y: 459
         width: 182
         height: 182
@@ -198,9 +198,9 @@ TextureImporter:
         x: 13
         y: 269
         width: 182
-        height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 182
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,9 +212,9 @@ TextureImporter:
         x: 204
         y: 269
         width: 182
-        height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 182
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: TilesAtlas_8
       rect:
         serializedVersion: 2
-        x: 394
+        x: 395
         y: 269
-        width: 183
-        height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 182
+        height: 182
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

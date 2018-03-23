@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4998978873232682}
   - component: {fileID: 212423692293113120}
   m_Layer: 0
-  m_Name: placeholderblock
+  m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067672417950158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.13, y: -0.359506, z: 0.29492188}
+  m_LocalPosition: {x: 34, y: -2, z: 0.054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4998978873232682}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6374312c3273d14baba2ee3252bc272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRotation: -20
+  speedRotation: -5
 --- !u!212 &212423692293113120
 SpriteRenderer:
   m_ObjectHideFlags: 1
