@@ -46,36 +46,36 @@ SpriteAtlas:
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: a0332a56c16d0ee45ae3641ac3aed539, type: 3}
-  - {fileID: 21300000, guid: 690377f5926b80e4799e198170fa9154, type: 3}
-  - {fileID: 21300000, guid: d6b5953a53335c143b1015ebc129f6da, type: 3}
   - {fileID: 21300000, guid: 17cd41d2500f9cf4f9e7f58d86052ee8, type: 3}
-  - {fileID: 21300000, guid: 8d2244294e654e748ab859df5dfa135b, type: 3}
-  - {fileID: 21300000, guid: 6c08ed1c5c2b42741904b8fabb721695, type: 3}
-  - {fileID: 21300000, guid: 330b59c44d4362b41931ad901c2e4e6b, type: 3}
-  - {fileID: 21300000, guid: 58e053c879260ba4bb9131af03deb451, type: 3}
-  - {fileID: 21300000, guid: 7f9d4e07b696bcc4a880f33dfca8fca0, type: 3}
-  - {fileID: 21300000, guid: 0caa61aa83841ed439c6283696050c10, type: 3}
-  - {fileID: 21300000, guid: 0aa3e9cadc04a53418e0ccc28db292c2, type: 3}
-  - {fileID: 21300000, guid: 9f0aa19bf77572d42928af8d28984565, type: 3}
-  - {fileID: 21300000, guid: feefd7dfbbf046c4f92c8c225c58c134, type: 3}
+  - {fileID: 21300000, guid: d6b5953a53335c143b1015ebc129f6da, type: 3}
   - {fileID: 21300000, guid: 34933db28d7fb474b8b30a347a7eeec4, type: 3}
   - {fileID: 21300000, guid: d7d71f536ba8c134cae0fab665431b31, type: 3}
+  - {fileID: 21300000, guid: feefd7dfbbf046c4f92c8c225c58c134, type: 3}
+  - {fileID: 21300000, guid: 9f0aa19bf77572d42928af8d28984565, type: 3}
+  - {fileID: 21300000, guid: 0caa61aa83841ed439c6283696050c10, type: 3}
+  - {fileID: 21300000, guid: 6c08ed1c5c2b42741904b8fabb721695, type: 3}
+  - {fileID: 21300000, guid: 0aa3e9cadc04a53418e0ccc28db292c2, type: 3}
+  - {fileID: 21300000, guid: 690377f5926b80e4799e198170fa9154, type: 3}
+  - {fileID: 21300000, guid: a0332a56c16d0ee45ae3641ac3aed539, type: 3}
+  - {fileID: 21300000, guid: 330b59c44d4362b41931ad901c2e4e6b, type: 3}
+  - {fileID: 21300000, guid: 58e053c879260ba4bb9131af03deb451, type: 3}
+  - {fileID: 21300000, guid: 8d2244294e654e748ab859df5dfa135b, type: 3}
+  - {fileID: 21300000, guid: 7f9d4e07b696bcc4a880f33dfca8fca0, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Idle+Run
-  - Run08
-  - Run06
   - Run07
-  - Run04
-  - Run05
-  - Run02
-  - Run03
-  - Run01
-  - Idle01
-  - Idle03
-  - Idle02
-  - Idle05
+  - Run06
   - Idle04
   - Idle06
+  - Idle05
+  - Idle02
+  - Idle01
+  - Run05
+  - Idle03
+  - Run08
+  - Idle+Run
+  - Run02
+  - Run03
+  - Run04
+  - Run01
   m_Tag: monk
   m_IsVariant: 0

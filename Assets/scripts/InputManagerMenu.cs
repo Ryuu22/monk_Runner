@@ -7,6 +7,7 @@ public class InputManagerMenu : MonoBehaviour {
     MenuLevelList levelList;
     Vector2 flashTouch = Vector2.zero;
     [Range(0,1000)]public float minimumTouchDistance;
+    public AudioSource woosh;
 
     void Start ()
     {
@@ -22,14 +23,17 @@ public class InputManagerMenu : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 levelList.MoveRight();
+                woosh.Play();
             }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 levelList.MoveLeft();
+                woosh.Play();
             }
         if(Input.GetKeyDown(KeyCode.Space))
             {
                 levelList.EnterScene();
+                woosh.Play();
             }
 #endif
 #if UNITY_EDITOR

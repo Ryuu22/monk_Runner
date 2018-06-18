@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour {
 
     Player player;
+    public VictoryPoint victoryPoint;
+
+   
     
 
 	void Start ()
     {
         player = GetComponent<Player>();
+        
 	}
 	
 	// Update is called once per frame
@@ -21,7 +26,8 @@ public class InputManager : MonoBehaviour {
 
      if (Input.GetKey(KeyCode.RightArrow) && player.landed) player.MakePlayerRun();   
      if (Input.GetKeyUp(KeyCode.RightArrow)) player.running = false;                    
-     if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump(); 
+     if (Input.GetKeyDown(KeyCode.UpArrow)) player.MakePlayerJump();
+     if (Input.GetKeyDown(KeyCode.K) && victoryPoint.thisCanvas.isActiveAndEnabled) SceneManager.LoadScene("Menu");
  
      
 #endif

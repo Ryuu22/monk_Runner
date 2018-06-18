@@ -57,7 +57,7 @@ public class LevelFrameBehaviour : MonoBehaviour {
     {
         if(selected)
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Tutorial");
         }
     }
     

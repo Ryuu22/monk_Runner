@@ -8,12 +8,18 @@ public class MenuLevelList : MonoBehaviour {
     public List<GameObject> sprites;
     public int spriteIndex;
     public int maxLevels;
+    public int unlockedLevels = 0;
 
     public float freq;
     Vector3 currentpos;
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Start()
+    {
+        unlockedLevels = PlayerPrefs.GetInt("unlockedLevels");
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         currentpos = Vector2.Lerp(this.transform.position, new Vector2(spriteIndex * -5, 0), freq);
 
@@ -51,6 +57,10 @@ public class MenuLevelList : MonoBehaviour {
     }
     public void EnterScene()
     {
-        sprites[spriteIndex].GetComponent<LevelFrameBehaviour>().GoToScene();
+        if(spriteIndex <= unlockedLevels)
+        {
+            sprites[spriteIndex].GetComponent<LevelFrameBehaviour>().GoToScene();
+        }
+
     }
 }

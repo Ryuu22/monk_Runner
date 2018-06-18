@@ -11,6 +11,8 @@ public class Player : MonoBehaviour {
     [SerializeField] private float jumpForce;
     [SerializeField] private Vector2 maxVelocity;
 
+    [SerializeField] private AudioSource humSound;
+
     [Header("States")]
 
     public bool landed;
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour {
     private Rigidbody2D rb;
     private float monkVelocity;
     public Animator anim;
+    public bool Victory;
 
     // Use this for initialization
     void Start()
@@ -47,38 +50,46 @@ public class Player : MonoBehaviour {
 
     void Update()
     {
-        if (this.transform.position.y < -10) Die();
-
-        if(rb.velocity.x > maxVelocity.x)
+        if (!Victory)
         {
-            rb.velocity = new Vector2(maxVelocity.x,rb.velocity.y);
-        }
+            if (this.transform.position.y < -10) Die();
 
-        if (landed && !running) MakePlayerStop();
+            if (rb.velocity.x > maxVelocity.x)
+            {
+                rb.velocity = new Vector2(maxVelocity.x, rb.velocity.y);
+            }
 
-        if (!landed && rb.velocity.y < 1.5f)
-        {
-            if(!running)rb.velocity = new Vector2(monkVelocity,rb.velocity.y);
-            falling = true;
-            raising = false;
-        }
-        else if (!landed && rb.velocity.y > 0)
-        {
-            falling = false;
-            raising = true;
+            if (landed && !running) MakePlayerStop();
+
+            if (!landed && rb.velocity.y < 1.5f)
+            {
+                if (!running) rb.velocity = new Vector2(monkVelocity, rb.velocity.y);
+                falling = true;
+                raising = false;
+            }
+            else if (!landed && rb.velocity.y > 0)
+            {
+                falling = false;
+                raising = true;
+            }
+            else
+            {
+                falling = false;
+                raising = false;
+            }
+            //Animation
+            anim.SetBool("running", running);
+            anim.SetBool("landed", landed);
+            anim.SetBool("falling", falling);
+            anim.SetBool("raising", raising);
+
+            DetectFloor();
         }
         else
         {
-            falling = false;
-            raising = false;
+            this.rb.velocity = new Vector2(0,0);
         }
-            //Animation
-        anim.SetBool("running", running);
-        anim.SetBool("landed", landed);
-        anim.SetBool("falling", falling);
-        anim.SetBool("raising", raising);
 
-        DetectFloor();
 
     }
     void FixedUpdate()
@@ -115,14 +126,16 @@ public class Player : MonoBehaviour {
             monkVelocity = rb.velocity.x;
 
             Vector2 jumpForceV = new Vector2(0, jumpForce);
-
+            GetComponent<AudioSource>().Play();
             rb.AddForce(jumpForceV);
         }
 
     }
     public void Die()
     {
+        humSound.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     #region Environment detection
